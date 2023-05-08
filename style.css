@@ -1,0 +1,50 @@
+
+/* ---------------lunes------------------------ */
+.sunday{
+    background-color: white;
+}
+.img{
+    width: 150px;
+    height: 150px;
+}
+.btn{
+    border-radius: 50px;
+    background-color: #476C9B;
+    color: white;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+}
+.lun{
+    text-align: center;
+    font-size: 35px;
+    color:#414770;
+}
+.img{
+    border: 1px solid black;
+}
+.center{
+    color: #5B1865;
+    font-size: larger;
+    text-align: center;
+}
+
+.table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="number"] {
+    width: 50px;
+}
+input[type="text"] {
+    width: 75px;
+}
+#title{
+    text-align: center;
+}
+
+.index{
+    background-image: url("https://i.pinimg.com/736x/24/48/d9/2448d92d2e1ab6528b9a64df2cffa2a6.jpg");
+    color: aliceblue;
+}

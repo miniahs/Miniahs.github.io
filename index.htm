@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="obtenerFechaActual();" class="index">
+    <h2 id="title">Hola estas son las rutinas</h2>
+    <br>
+    <br>
+    <table class="table">
+        <tr>
+            <td>
+                <a href="Lunes.html"><button class="btn">Lunes</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="Martes.html"><button class="btn">Martes</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="Miercoles.html"><button class="btn">Miercoles</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="Jueves.html"><button class="btn">Jueves</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="viernes.html"><button class="btn">Viernes</button></a>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <form>
+        <label for="dia">Día:</label>
+        <input type="text" id="dia" name="dia" readonly>
+    
+        <label for="mes">Mes:</label>
+        <input type="number" id="mes" name="mes" min="1" max="12">
+    
+        <label for="anio">Año:</label>
+        <input type="number" id="anio" name="anio">
+    </form>
+    <br>
+    <br>
+    <a href="RUTINA 01.pdf" target="_blank"><button class="btn">Abrir PDF</button></a>
+
+
+</body>
+<script>
+    // Función para obtener la fecha actual y el día de la semana
+    function obtenerFechaActual() {
+      var fecha = new Date();
+      var dia = fecha.getDate();
+      var diaSemana = obtenerDiaSemana(fecha);
+      var mes = fecha.getMonth() + 1; // Los meses comienzan en 0
+      var anio = fecha.getFullYear(); // Obtener el nombre del día de la semana
+      
+      // Configurar los valores en los campos de entrada
+      document.getElementById('dia').value = dia + ' (' + diaSemana + ')';
+      document.getElementById('mes').value = mes;
+      document.getElementById('anio').value = anio;
+    }
+
+    // Función para obtener el nombre del día de la semana
+    function obtenerDiaSemana(fecha) {
+      var diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+      var diaSemana = fecha.getDay();
+      
+      return diasSemana[diaSemana];
+    }
+
+</script>
+</html>
